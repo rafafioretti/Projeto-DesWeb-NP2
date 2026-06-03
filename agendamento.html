@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinária Afetto</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script defer src="./JS/app.js"></script>
+    <script defer src="./JS/nav.js"></script>
+    <script defer src="./JS/reveal.js"></script>
+</head>
+    
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html">
+            <img src="./Fotos Capa/Logo afetto.png" alt="Logo Afetto" class="logoImg">
+        </a>
+
+        <button class="trick"></button>
+
+        <ul class="navList">
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="pagina-agendamento">
+
+<h1>Cadastro de Pet</h1>
+
+<div class="formularios reveal">
+
+  <!-- FORMULÁRIO -->
+  <div class="form1">
+
+        <form action="" method="post" class="formCadastro">
+
+        <h2>Dados do Tutor</h2>
+
+        <label>Nome:</label><br>
+        <input type="text"><br>
+
+        <label>Telefone:</label><br>
+        <input type="text"><br>
+
+        <label>E-mail:</label><br>
+        <input type="email"><br>
+
+        <h2>Dados do Pet</h2>
+
+        <label>Nome do pet:</label><br>
+        <input type="text"><br>
+
+        <label>Espécie:</label><br>
+        <select>
+            <option>Selecione...</option>
+            <option>Cão</option>
+            <option>Gato</option>
+        </select><br>
+
+        <label>Data de nascimento:</label><br>
+        <input type="date"><br>
+
+        <label>Sexo:</label>
+
+        <div class="sexo">
+        <label><input type="radio" name="sexo"> Macho</label>
+        <label><input type="radio" name="sexo"> Fêmea</label>
+        </div>
+
+        <button type="reset">Limpar</button>
+
+        </form>
+
+  </div>
+
+    <div class="direita">
+
+        <h2>Cálculo de Frete</h2>
+
+        <form>
+
+            <label>Digite seu CEP:</label><br>
+            <input type="text" id="cep"><br>
+
+            <label>Tipo de entrega:</label><br>
+            <select id="tipo">
+            <option value="normal">Normal</option>
+            <option value="rapida">Rápida</option>
+            </select><br><br>
+
+            <button type="button" onclick="calcularFrete()">Calcular Frete</button>
+
+            <p id="resultado">Resultado aparecerá aqui.</p>
+
+        </form>
+
+</div> 
+
+</div>
+
+<div id="popupFrete" class="popup-frete" aria-hidden="true">
+    <div class="popup-frete-conteudo">
+        <h3>Frete calculado com sucesso</h3>
+        <p id="mensagemPopup">Confira o valor do frete no resultado abaixo.</p>
+        <button type="button" onclick="fecharPopupFrete()">Fechar</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-bottom reveal">
+    <p>&copy; 2026 Centro Veterinário Popular Afetto. Todos os direitos reservados</p>
+    </div>
+</footer>
+</body>
